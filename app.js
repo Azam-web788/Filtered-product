@@ -2,12 +2,12 @@ const products = [
     { 
         img: "https://www.czone.com.pk/Images/Thumbnails/2-czone.com.pk-1540-16358-060724112742.jpg", 
         name: "Laptop",
-        brand: "Dell", 
+        brand: "lenovo", 
         category: "Electronics", 
         price: 999.99,
     },
     { 
-        img: "file:///C:/Users/DELL/Downloads/apple-iphone-16-pro-max-pakistan-priceoye-tb3u6-500x500.webp", 
+        img: "https://www.istudio.store/cdn/shop/files/iPhone_16_Pro_Desert_Titanium_TH_1.jpg?v=1725929129", 
         name: "Smartphone",
         brand: "iphone", 
         category: "Electronics", 
@@ -35,7 +35,7 @@ const products = [
         price: 49.99,
     },
     { 
-        img: "file:///C:/Users/DELL/Downloads/samsung-75-inch-4k-smart-led-tv-75ru7100-pakistan-priceoye-1fdur-500x500.webp",
+        img: "https://images.samsung.com/is/image/samsung/p6pim/pk/ua50du7000usmm/gallery/pk-crystal-uhd-du7000-511088-ua50du7000usmm-542183024?$684_547_PNG$",
         name: "LED TV",
         brand: "Samsung", 
         category: "Electronics", 
@@ -56,6 +56,13 @@ const products = [
         price: 199.99,
     },
     { 
+        img: "https://thumbs.dreamstime.com/b/bass-drum-d-illustration-white-background-42820957.jpg", 
+        name: "Drum",
+        brand: "Kawai", 
+        category: "Musical Instruments", 
+        price: 300.99,
+    },
+    { 
         img: "https://yamahamrm.pk/wp-content/uploads/2022/02/YUS1-1.webp", 
         name: "Piano",
         brand: "kawai", 
@@ -70,23 +77,23 @@ const products = [
         price: 190.99,
     },
     { 
-        img: "https://exportclub.pk/wp-content/uploads/2024/09/ben-seman-maroon.jpg",
+        img: "https://brandahub.com/cdn/shop/files/0_71_427ca860-4761-4dfd-9a1d-7db0c194a467.jpg?v=1712434784",
         name: "Trouser",
-        brand: "under armour",
+        brand: "Addidas",
         category: "Apparel", 
         price: 140.99,
     },
     { 
-        img: "https://www.apnafurniture.pk/wp-content/uploads/2021/10/Untitled-4-30-510x511.jpg", 
-        name: "Study table",
-        brand: "logi tech", 
-        category: "Furniture", 
-        price: 180.99,
+        img: "https://montivo.pk/cdn/shop/products/010-1_39f947ea-64be-4a23-8c2b-b9556c283b96_1024x1024.jpg?v=1650997342",
+        name: "Black Pants",
+        brand: "Gucci",
+        category: "Apparel", 
+        price: 100.99,
     },
     { 
-        img: "https://sialmart.pk/wp-content/uploads/2024/05/Untitled-design-52-2.jpg", 
-        name: "Batminton racket",
-        brand: "Eminent", 
+        img: "https://img.drz.lazcdn.com/static/pk/p/d09c7cbd160f2429c8659dc553d3ad88.jpg_720x720q80.jpg_.webp", 
+        name: "Cricket Bat",
+        brand: "1x Bat", 
         category: "Sports", 
         price: 189.99,
     },
@@ -105,7 +112,7 @@ const products = [
         price: 200.99,
     },
     { 
-        img: "https://apollosports.pk/wp-content/uploads/2024/08/CA-cricket-kit-bag-plus-12000.jpg", 
+        img: "https://img.drz.lazcdn.com/static/pk/p/cc5c878654162b40163f7c76febcf459.jpg_720x720q80.jpg_.webp", 
         name: "Cricket bag",
         brand: "calaway", 
         category: "Sports", 
@@ -119,14 +126,14 @@ const products = [
         price: 260.99,
     },
     { 
-        img: "https://m1.com.pk/wp-content/uploads/2021/09/Maxtone-Drum-Kit-5pcs-Black.jpg",
+        img: "https://thumbs.dreamstime.com/b/bass-drum-d-illustration-white-background-42820957.jpg",
         name: "Drum",
         brand: "kawai", 
         category: "Musical Instrument", 
         price: 210.99,
     },
     { 
-        img: "https://apollosports.pk/wp-content/uploads/2024/03/Apollo-Football-24165-4315-0907-Hybrid-WhiteBlack-Size.5-Official-Weight-Size3-1-300x300.jpg", 
+        img: "https://img.drz.lazcdn.com/static/pk/p/84c0be392191afcd29d5e7bb851af5d0.jpg_720x720q80.jpg_.webp", 
         name: "Football",
         brand: "fifa", 
         category: "Sports", 
@@ -178,11 +185,20 @@ console.log(filter);
                 <h1>Name: ${item.name}</h1>
                 <h2>brand: ${item.brand} </h2>
                 <h2>Category: ${item.category}</h2>
-                <h1>Price: ${item.price}</h1>
+                <h1>Price: $${item.price}</h1>
                 <Center>
-                <button>Add to Cart</button>
+                <button class = "cart" onclick = "cart()">Add to Cart</button>
                 </center>
             </div>`
                
   }
 )}
+function cart() {
+    Swal.fire({
+  position: "top-end",
+  icon: "success",
+  title: "Your product is add to cart",
+  showConfirmButton: false,
+  timer: 1500
+});
+}
