@@ -1,6 +1,6 @@
 const products = [
     { 
-        img: "https://www.czone.com.pk/Images/Thumbnails/2-czone.com.pk-1540-16358-060724112742.jpg", 
+        img: "https://static.webx.pk/files/78721/Images/hp--15-fd0532nia-laptop-price-in-pakistan-at-galaxy.pk-78721-2357769-020825055331364.webp", 
         name: "Laptop",
         brand: "lenovo", 
         category: "Electronics", 
